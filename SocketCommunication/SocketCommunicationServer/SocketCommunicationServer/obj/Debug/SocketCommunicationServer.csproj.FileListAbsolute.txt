@@ -1,0 +1,6 @@
+C:\Users\Ryosuke\source\repos\SocketCommunicationServer\SocketCommunicationServer\bin\Debug\SocketCommunicationServer.exe.config
+C:\Users\Ryosuke\source\repos\SocketCommunicationServer\SocketCommunicationServer\bin\Debug\SocketCommunicationServer.exe
+C:\Users\Ryosuke\source\repos\SocketCommunicationServer\SocketCommunicationServer\bin\Debug\SocketCommunicationServer.pdb
+C:\Users\Ryosuke\source\repos\SocketCommunicationServer\SocketCommunicationServer\obj\Debug\SocketCommunicationServer.csprojAssemblyReference.cache
+C:\Users\Ryosuke\source\repos\SocketCommunicationServer\SocketCommunicationServer\obj\Debug\SocketCommunicationServer.exe
+C:\Users\Ryosuke\source\repos\SocketCommunicationServer\SocketCommunicationServer\obj\Debug\SocketCommunicationServer.pdb
