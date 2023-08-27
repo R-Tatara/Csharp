@@ -1,0 +1,7 @@
+﻿{
+  "network": {
+    "ipaddr": "192.168.0.20",
+    "port": 7654
+  },
+  "filepath": ".\\log"
+}
