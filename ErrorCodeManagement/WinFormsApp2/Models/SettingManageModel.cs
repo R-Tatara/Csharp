@@ -6,18 +6,18 @@ namespace WinFormsApp2.Models
     /// <summary>
     /// 設定ファイルを管理するためのクラスです。
     /// </summary>
-    internal class SettingFileModel
+    internal class SettingManageModel
     {
         ConfigKeyList? config;
 
-        public SettingFileModel()
+        public SettingManageModel()
         {
             config = new ConfigKeyList();
         }
 
         //[TODO]jsonファイルが存在しない場合
         //[TODO]項目が不足している場合のnullチェック
-        public void LoadSettingFile()
+        public void ReadSettingFile()
         {
             using (var sr = new StreamReader(@".\sample.json", Encoding.UTF8))
             {
@@ -29,7 +29,7 @@ namespace WinFormsApp2.Models
         }
 
         //[TODO]jsonファイルが他プロセスによってオープンされていた場合
-        public void SaveSettingFile()
+        public void WriteSettingFile()
         {
             //Serialize from object to json
             var jsonWriteData = JsonConvert.SerializeObject(config, Formatting.Indented);
@@ -42,7 +42,7 @@ namespace WinFormsApp2.Models
             }
         }
 
-        public bool UpdateNetworkPort(int newNum)
+        public bool UpdateR2sPort(int newNum)
         {
             //[TODO]マジックナンバーの置き換え
             if (newNum >= 1 && newNum <= 65535)

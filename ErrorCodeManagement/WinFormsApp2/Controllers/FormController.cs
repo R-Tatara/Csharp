@@ -5,12 +5,14 @@ namespace WinFormsApp2.Controllers
     internal class FormController
     {
         private Form1 form1;
-        private SettingFileModel jsonIO;
+        private SettingManageModel settingManageModel;
+        private ErrorTableModel errorTableModel;
 
         public FormController(Form1 form)
         {
-            jsonIO = new SettingFileModel();
+            settingManageModel = new SettingManageModel();
             form1 = form;
+            errorTableModel = new ErrorTableModel();
         }
 
         /// <summary>
@@ -18,7 +20,7 @@ namespace WinFormsApp2.Controllers
         /// </summary>
         public void LoadSettingFile()
         {
-            jsonIO.LoadSettingFile();
+            settingManageModel.ReadSettingFile();
         }
 
         /// <summary>
@@ -26,7 +28,7 @@ namespace WinFormsApp2.Controllers
         /// </summary>
         public void SaveSettingFile()
         {
-            jsonIO.SaveSettingFile();
+            settingManageModel.WriteSettingFile();
         }
 
         /// <summary>
@@ -34,11 +36,21 @@ namespace WinFormsApp2.Controllers
         /// ポート番号が範囲外の場合、エラーメッセージを表示します。
         /// </summary>
         /// <param name="newPort">変更後のポート番号</param>
-        public void UpdateNetworkPort(int newPort)
+        public void UpdateR2sPort(int newPort)
         {
-            if (jsonIO.UpdateNetworkPort(newPort) == false)
+            if (settingManageModel.UpdateR2sPort(newPort) == false)
             {
-                form1.ShowErrorMessageBox(1000);
+                ShowErrorMessageBox(1000);
+            }
+        }
+
+        private void ShowErrorMessageBox(int errorNum)
+        {
+            //[TODO]エラー番号登録漏れの場合
+            ErrorModel errorModel = errorTableModel.GetErrorInfo(errorNum);
+            if (errorModel != null)
+            {
+                form1.ShowErrorMessageBox(errorModel);
             }
         }
     }

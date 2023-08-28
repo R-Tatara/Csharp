@@ -3,11 +3,11 @@
     /// <summary>
     /// エラー一覧を定義するためのクラスです。
     /// </summary>
-    public class ErrorTable
+    public class ErrorTableModel
     {
         private List<ErrorModel> errorList;
 
-        public ErrorTable()
+        public ErrorTableModel()
         {
             errorList = new List<ErrorModel>
             {
