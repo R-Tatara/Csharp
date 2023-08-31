@@ -47,7 +47,7 @@ namespace WinFormsApp2.Models
             //[TODO]マジックナンバーの置き換え
             if (newNum >= 1 && newNum <= 65535)
             {
-                config.network.port = newNum;
+                config.server.port = newNum;
                 return true;
             }
             else

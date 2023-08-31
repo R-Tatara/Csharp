@@ -1,7 +1,25 @@
 ﻿{
-  "network": {
-    "ipaddr": "192.168.0.20",
-    "port": 7654
+  "robotControllerList": [
+    {
+      "rcserial": "BB1010001R",
+      "ip": "192.168.0.20",
+      "port": 10005
+    },
+    {
+      "rcserial": "BB1010002R",
+      "ip": "192.168.0.21",
+      "port": 10005
+    }
+  ],
+  "server": {
+    "ip": "192.168.0.100",
+    "port": 8888
   },
-  "filepath": ".\\log"
+  "collecter": {
+    "shortPeriod": 2,
+    "longPeriod": 3600
+  },
+  "others": {
+    "ignoreMssts": 0
+  }
 }
