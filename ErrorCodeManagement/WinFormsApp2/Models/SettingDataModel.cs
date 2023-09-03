@@ -5,10 +5,10 @@ namespace WinFormsApp2.Models
     /// <summary>
     /// 設定ファイルのキーの一覧を定義しています。
     /// </summary>
-    public sealed class ConfigKeyList
+    public class ConfigKeyList
     {
         [JsonProperty("robotControllerList")]
-        public RobotControllerListKeyList[] robotControllerList { get; set; }
+        public List<RobotControllerListKeyList> robotControllerList { get; set; }
 
         [JsonProperty("server")]
         public ServerKeyList server { get; set; }
@@ -23,7 +23,7 @@ namespace WinFormsApp2.Models
     /// <summary>
     /// 設定ファイルの"rclist"キー内のキーの一覧を定義しています。
     /// </summary>
-    public sealed class RobotControllerListKeyList
+    public class RobotControllerListKeyList
     {
         [JsonProperty("rcserial")]
         public string rcserial { get; set; } = "";
@@ -38,7 +38,7 @@ namespace WinFormsApp2.Models
     /// <summary>
     /// 設定ファイルの"server"キー内のキーの一覧を定義しています。
     /// </summary>
-    public sealed class ServerKeyList
+    public class ServerKeyList
     {
         [JsonProperty("ip")]
         public string ip { get; set; } = "";
@@ -50,7 +50,7 @@ namespace WinFormsApp2.Models
     /// <summary>
     /// 設定ファイルの"collecter"キー内のキーの一覧を定義しています。
     /// </summary>
-    public sealed class CollecterKeyList
+    public class CollecterKeyList
     {
         [JsonProperty("shortPeriod")]
         public int shortPeriod { get; set; }
@@ -62,7 +62,7 @@ namespace WinFormsApp2.Models
     /// <summary>
     /// 設定ファイルの"others"キー内のキーの一覧を定義しています。
     /// </summary>
-    public sealed class OthersKeyList
+    public class OthersKeyList
     {
         [JsonProperty("ignoreMssts")]
         public int ignoredMssts { get; set; }

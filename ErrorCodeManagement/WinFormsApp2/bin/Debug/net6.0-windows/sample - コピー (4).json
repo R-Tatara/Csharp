@@ -1,14 +1,19 @@
 ﻿{
   "robotControllerList": [
     {
-      "rcserial": "BB1010001R",
-      "ip": "192.168.0.20",
-      "port": 10005
+      "rcserial": "",
+      "ip": "127.0.0.1",
+      "port": 123
     },
     {
-      "rcserial": "BB1010002R",
-      "ip": "192.168.0.21",
-      "port": 10005
+      "rcserial": "",
+      "ip": "192.168.0.102",
+      "port": 6789
+    },
+    {
+      "rcserial": "",
+      "ip": "192.168.0.102",
+      "port": 6789
     },
     {
       "rcserial": "",
@@ -17,8 +22,8 @@
     }
   ],
   "server": {
-    "ip": "192.168.0.100",
-    "port": 8888
+    "ip": "192.168.0.101",
+    "port": 7654
   },
   "collecter": {
     "shortPeriod": 2,
