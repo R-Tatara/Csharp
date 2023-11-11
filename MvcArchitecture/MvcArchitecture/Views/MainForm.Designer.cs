@@ -59,6 +59,7 @@
             Controls.Add(TestButton);
             Name = "MainForm";
             Text = "Form1";
+            FormClosing += MainForm_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }

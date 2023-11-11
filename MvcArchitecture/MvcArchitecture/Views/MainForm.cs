@@ -30,5 +30,13 @@ namespace MvcArchitecture.Views
                 MessageBox.Show(message.Message, message.Title, message.Button, message.Icon);
             }
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string msg = string.Format("Are you sure you want to close?");
+            if (MessageBox.Show(msg, Constants.SoftwareName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) {
+                e.Cancel = true;
+            }
+        }
     }
 }
